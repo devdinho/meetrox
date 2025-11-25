@@ -14,6 +14,7 @@ from rest_framework_simplejwt.views import (
 )
 
 from authentication.api import CreateProfileRestView, ProfileRestView
+from crm_integration.api import PreSignUpApiView
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -21,7 +22,7 @@ schema_view = get_schema_view(
         default_version="v1",
         description="API documentation for the Armored Django project",
         terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="contact@armoreddjango.local"),
+        contact=openapi.Contact(email="contact@meetrox.local"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,
@@ -59,6 +60,12 @@ router.register(
     "api/register/", CreateProfileRestView, basename="CreateProfileRestView"
 )
 router.register("api/profile", ProfileRestView, basename="ProfileRestView")
+
+router.register(
+    "api/crm-integration/pre-sign-up",
+    PreSignUpApiView,
+    basename="PreSignUpApiView",
+)
 
 urlpatterns += router.urls
 

@@ -4,17 +4,17 @@ class ProfileType(object):
     Atributos:
         - ADMIN (int): Administrador, usuário com permissões de Administrador.
         - DEVELOPER (int): Desenvolvedor, usuário com permissões de Desenvolvedor.
-        - EARUSER (int): Usuário Padrão, usuário com permissões de Usuário Padrão.
+        - CRM_USER (int): Usuário do CRM, usuário com permissões de Usuário do CRM.
     """
 
     ADMIN = 1
     DEVELOPER = 2
-    EARUSER = 3
+    CRM_USER = 3
 
     PROFILE_TYPE_CHOICES = (
         (ADMIN, "Administrador"),
         (DEVELOPER, "Desenvolvedor"),
-        (EARUSER, "Usuário Padrão"),
+        (CRM_USER, "Usuário do CRM"),
     )
 
 

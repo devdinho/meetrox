@@ -34,7 +34,7 @@ class Profile(AbstractUser):
     profileType = models.IntegerField(
         "Tipo de Perfil",
         choices=ProfileType.PROFILE_TYPE_CHOICES,
-        default=ProfileType.EARUSER,
+        default=ProfileType.CRM_USER,
     )
 
     groups = models.ManyToManyField(

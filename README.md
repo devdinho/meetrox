@@ -1,4 +1,4 @@
-![ArmoredDjango](title.png)
+![MeetRox](title.png)
 
 Uma base (template) de aplicação web construída com Django, focada em oferecer
 um ponto de partida com autenticação, gerenciamento de perfis e integração
@@ -122,7 +122,7 @@ O repositório já inclui scripts para facilitar testes e lint:
 (visão resumida)
 
 - service/: Dockerfile, scripts e código Python (src/)
-  - src/armoreddjango/: configurações do Django
+  - src/meetrox/: configurações do Django
   - src/authentication/: app com models, serializers e views
   - scripts/: scripts para start, lint e testes
 - docker-compose.yaml: define os serviços `django` e `db` (Postgres)

@@ -38,9 +38,9 @@ jobs:
 
       - name: Wait for lint container to finish
         run: |
-          docker logs -f armoreddjango_lint
-          docker wait armoreddjango_lint
-          exit_code=$(docker inspect armoreddjango_lint --format='{{.State.ExitCode}}')
+          docker logs -f meetrox_lint
+          docker wait meetrox_lint
+          exit_code=$(docker inspect meetrox_lint --format='{{.State.ExitCode}}')
           if [ "$exit_code" -ne 0 ]; then
             echo "Lint container failed"
             exit $exit_code
@@ -51,9 +51,9 @@ jobs:
 
       - name: Wait for test container to finish
         run: |
-          docker logs -f armoreddjango_test
-          docker wait armoreddjango_test
-          exit_code=$(docker inspect armoreddjango_test --format='{{.State.ExitCode}}')
+          docker logs -f meetrox_test
+          docker wait meetrox_test
+          exit_code=$(docker inspect meetrox_test --format='{{.State.ExitCode}}')
           if [ "$exit_code" -ne 0 ]; then
             echo "Test container failed"
             exit $exit_code

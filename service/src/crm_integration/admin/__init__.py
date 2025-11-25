@@ -1,0 +1,2 @@
+from crm_integration.admin.CrmAdmin import CrmIntegrationAdmin
+from crm_integration.admin.PreSignUpAdmin import PreSignUpAdmin

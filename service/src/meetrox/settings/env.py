@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 
-from armoreddjango.settings.base import *
+from meetrox.settings.base import *
 
 SITE_ID = 1
 
@@ -11,10 +11,10 @@ load_dotenv(override=True)
 DEBUG = os.getenv("DEBUG").lower() == "true"
 PRODUCTION = os.getenv("PRODUCTION", "False").lower() == "true"
 
-POSTGRES_DB = "armoreddjango_db"
+POSTGRES_DB = "meetrox_db"
 POSTGRES_USER = os.getenv("POSTGRES_USER")
 POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
-DB_HOST = "armoreddjango_db"
+DB_HOST = "meetrox_db"
 DB_PORT = os.getenv("DB_PORT", 5432)
 
 SECRET_KEY = os.getenv("SECRET_KEY")

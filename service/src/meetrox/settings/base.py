@@ -16,9 +16,10 @@ DEFAULT_APPS = [
 ]
 
 LOCAL_APPS = [
-    "armoreddjango",
+    "meetrox",
     "authentication",
     "utils",
+    "crm_integration",
 ]
 
 OTHER_APPS = [
@@ -43,7 +44,7 @@ MIDDLEWARE = [
     "simple_history.middleware.HistoryRequestMiddleware",
 ]
 
-ROOT_URLCONF = "armoreddjango.urls"
+ROOT_URLCONF = "meetrox.urls"
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
@@ -86,7 +87,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "armoreddjango.wsgi.application"
+WSGI_APPLICATION = "meetrox.wsgi.application"
 
 AUTH_USER_MODEL = "authentication.profile"
 
@@ -130,7 +131,7 @@ LOGIN_URL = "/admin/login/"
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
-        "LOCATION": "unique-armoreddjango-cache",
+        "LOCATION": "unique-meetrox-cache",
     }
 }
 
